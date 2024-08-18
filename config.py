@@ -8,7 +8,7 @@ from llama_index.core.embeddings import resolve_embed_model
 #     load_index_from_storage
 # )
 
-Settings.llm = Groq(model="llama3-70b-8192", api_key="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")
+Settings.llm = Groq(model="llama3-70b-8192", api_key="Your_API_Key")
 #Settings.embed_model = HuggingFaceEmbedding(model_name="BAAI/bge-m3")
 #embed_model = HuggingFaceEmbedding(model_name="BAAI/bge-m3")
 # Settings.embed_model = HuggingFaceEmbedding(

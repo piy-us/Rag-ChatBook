@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Image Display</title>
+  <link href="{{ url_for('static', filename='cropperjs/cropper.css') }}" rel="stylesheet">
+  <script src="{{ url_for('static', filename='cropperjs/cropper.js') }}"></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">  </head>
+<body>
+  <div class="main-container">
+    <div class="img-container">
+      <img id="image" src="static/converted_images/page1.png" alt="Image">
+    </div>
+    <input type="number" id="numberInput" placeholder="PgNo.">
+    <button id="submitButton">Submit</button>  
+  <button id="btn-crop">Copy</button>
+  <button id="btn-toggle-cropper">Turn on Cropper</button>
+  </div>
+  <div class="container">
+    <div class="chatbox">
+        <div class="chatbox__support">
+            <div class="chatbox__header">
+                <div class="chatbox__image--header">
+                    <img src="https://img.icons8.com/color/48/000000/circled-user-female-skin-type-5--v1.png" alt="image">
+                </div>
+                <div class="chatbox__content--header">
+                    <h4 class="chatbox__heading--header">Hermes</h4>
+                    <p class="chatbox__description--header">Let me download worlds into your mind, one page at a time</p>
+                </div>
+            </div>
+            <div class="chatbox__messages">
+                <div>
+                    <pre class="message-content">                               
+                    </pre>
+                </div>
+            </div>
+            <div class="chatbox__footer">
+                <input type="text" placeholder="Write a message...">
+                <button class="chatbox__send--footer send__button">Send</button>
+            </div>
+        </div>
+        <div class="chatbox__button">
+            <button><img src="{{ url_for('static', filename='images/chatbox-icon.svg') }}" /></button>
+        </div>
+    </div>
+</div>
+<script>
+$SCRIPT_ROOT = {{ request.script_root|tojson }};
+</script>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
